@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Kerem Yilmaz Ads Automation</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    max-width: 720px;
+    margin: 60px auto;
+    padding: 0 24px;
+    color: #1a1a1a;
+    line-height: 1.65;
+    font-size: 16px;
+  }
+  h1 { font-size: 26px; margin-bottom: 4px; }
+  h2 { font-size: 18px; margin-top: 32px; color: #333; }
+  .updated { color: #777; font-size: 14px; margin-bottom: 32px; }
+  a { color: #1a73e8; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #eee; color: #888; font-size: 13px; }
+</style>
+</head>
+<body>
+
+<h1>Privacy Policy</h1>
+<p class="updated">Last updated: 10 May 2026</p>
+
+<p>This Privacy Policy describes how the internal automation tool ("the Tool") operated by <strong>Kerem Yilmaz Digital Marketing</strong> ("we", "us") handles information accessed through the Meta Marketing API and the Google Ads API. The Tool is for internal use only and is not made available to the public, to clients, or to any third party.</p>
+
+<h2>1. Scope</h2>
+<p>The Tool is operated solely by Kerem Yilmaz, a freelance digital marketing consultant based in Turkey, for the purpose of automating reporting, monitoring, and rule-based optimization tasks across advertising accounts that Kerem Yilmaz Digital Marketing has been authorized to manage by their respective owners.</p>
+
+<h2>2. Information We Access</h2>
+<p>The Tool accesses the following categories of information through authorized API connections:</p>
+<ul>
+  <li>Advertising performance metrics (impressions, clicks, cost, conversions, CTR, CPM, CPC, ROAS) for managed campaigns</li>
+  <li>Campaign, ad set, and ad configuration data (names, status, budgets, schedules, targeting parameters)</li>
+  <li>Conversion and pixel event data for managed pixels</li>
+  <li>Ad account metadata required to identify and address the correct managed account</li>
+</ul>
+<p>The Tool does not access, collect, or process personally identifiable information (PII) about end users (the consumers who view, click on, or convert from our clients' ads). Any user-level data exposed by the platforms is aggregated before any human review.</p>
+
+<h2>3. How Information Is Used</h2>
+<p>Information accessed through the API is used exclusively for:</p>
+<ul>
+  <li>Generating performance reports for the account owner</li>
+  <li>Sending monitoring alerts to the operator (e.g. via Telegram) when performance metrics deviate from defined thresholds</li>
+  <li>Applying pre-approved, rule-based optimizations such as pausing under-performing campaigns or making bounded budget adjustments</li>
+</ul>
+<p>Information accessed for one client's account is never used in connection with another client, and is never disclosed to any third party.</p>
+
+<h2>4. Data Storage and Retention</h2>
+<p>API credentials (developer tokens, OAuth tokens, app secrets) are stored in environment variables on a private server with restricted access; they are never written to logs, never committed to version control, and never shared.</p>
+<p>Raw API responses are not persisted. Aggregated report outputs (PDF, Markdown summaries) are retained for up to 90 days for audit and historical comparison purposes, then automatically deleted. Operational log files are rotated weekly and removed after 30 days.</p>
+
+<h2>5. Data Sharing</h2>
+<p>We do not sell, license, or otherwise share data accessed through the API with any third party, with the following narrow exceptions:</p>
+<ul>
+  <li>The respective platform (Meta or Google) for the purpose of making the authorized API call itself.</li>
+  <li>The owner of the managed account, who receives reports derived from data accessed in their own account.</li>
+  <li>Telegram, used solely as the delivery channel for rendered summary messages and alerts addressed to the operator. No raw credentials or unaggregated user-level data are transmitted via Telegram.</li>
+</ul>
+
+<h2>6. Security</h2>
+<p>Access to the server running the Tool is restricted to the operator (Kerem Yilmaz) and protected by SSH key authentication. The server receives security updates regularly. There is no public-facing service exposed by the Tool.</p>
+
+<h2>7. Account Owner Rights</h2>
+<p>Owners of managed advertising accounts may at any time:</p>
+<ul>
+  <li>Revoke the Tool's access to their account through their Meta Business Manager or Google Ads account permissions interface.</li>
+  <li>Request deletion of any retained report outputs that pertain to their account.</li>
+  <li>Request a description of what data has been accessed by the Tool in connection with their account.</li>
+</ul>
+<p>Such requests can be sent to the contact address below and will be honored within 30 days.</p>
+
+<h2>8. Compliance</h2>
+<p>The Tool is operated in compliance with the Meta Platform Terms, the Meta Developer Policies, the Google Ads API Terms and Conditions, and the Google API Services User Data Policy, including the Limited Use requirements where applicable.</p>
+
+<h2>9. Changes to This Policy</h2>
+<p>We may update this policy from time to time as the scope of the Tool evolves. The "Last updated" date at the top of this document reflects the most recent revision.</p>
+
+<h2>10. Contact</h2>
+<p>For questions about this Privacy Policy or the Tool, contact:</p>
+<p>
+Kerem Yilmaz<br>
+Kerem Yilmaz Digital Marketing<br>
+Email: keremce2001@gmail.com
+</p>
+
+<footer>
+&copy; 2026 Kerem Yilmaz Digital Marketing. Internal automation tool. Not a public-facing product.
+</footer>
+
+</body>
+</html>
