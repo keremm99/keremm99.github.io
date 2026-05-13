@@ -1,51 +1,332 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kerem Yilmaz Digital Marketing</title>
+<title>Kerem Yılmaz — Dijital Pazarlama Danışmanlığı</title>
+<meta name="description" content="Google Ads ve Meta Ads kampanya yönetimi. Türkiye'de e-ticaret ve hizmet markaları için performans pazarlaması danışmanlığı.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    max-width: 640px;
-    margin: 80px auto;
-    padding: 0 24px;
-    color: #1a1a1a;
-    line-height: 1.65;
-    font-size: 17px;
+  :root {
+    --bg: #f6f3ee;
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --ink-faded: #8a8a8a;
+    --accent: #b8543b;
+    --line: #e0d9cf;
+    --paper: #fbf9f5;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', -apple-system, sans-serif;
   }
-  h1 { font-size: 28px; margin-bottom: 8px; }
-  .tagline { color: #666; margin-bottom: 32px; font-size: 16px; }
-  h2 { font-size: 18px; margin-top: 36px; }
-  a { color: #1a73e8; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .links { margin-top: 32px; }
-  .links a { display: inline-block; margin-right: 18px; }
-  footer { margin-top: 56px; padding-top: 24px; border-top: 1px solid #eee; color: #888; font-size: 13px; }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+
+  nav {
+    padding: 32px 0;
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 10;
+    backdrop-filter: blur(8px);
+  }
+  nav .container { display: flex; justify-content: space-between; align-items: center; }
+  .logo { font-family: var(--serif); font-size: 20px; font-weight: 500; letter-spacing: -0.01em; }
+  .logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 36px; }
+  .nav-links a { color: var(--ink-soft); text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--accent); }
+
+  .hero { padding: 120px 0 100px; border-bottom: 1px solid var(--line); }
+  .hero-tag { display: inline-block; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 28px; }
+  .hero h1 { font-family: var(--serif); font-size: clamp(40px, 6vw, 72px); line-height: 1.05; font-weight: 400; letter-spacing: -0.02em; margin-bottom: 32px; max-width: 880px; }
+  .hero h1 em { font-style: italic; color: var(--accent); }
+  .hero-sub { font-size: 19px; color: var(--ink-soft); max-width: 620px; line-height: 1.55; }
+
+  section { padding: 90px 0; border-bottom: 1px solid var(--line); }
+  .section-label { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faded); font-weight: 600; margin-bottom: 20px; }
+  .section-title { font-family: var(--serif); font-size: clamp(32px, 4vw, 44px); font-weight: 400; line-height: 1.15; letter-spacing: -0.015em; margin-bottom: 48px; max-width: 760px; }
+  .section-title em { font-style: italic; color: var(--accent); }
+
+  .services { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .service { background: var(--paper); padding: 40px 36px; }
+  .service-num { font-family: var(--serif); font-size: 14px; color: var(--accent); font-weight: 500; margin-bottom: 16px; font-style: italic; }
+  .service h3 { font-family: var(--serif); font-size: 24px; font-weight: 500; letter-spacing: -0.01em; margin-bottom: 14px; }
+  .service p { color: var(--ink-soft); font-size: 15px; line-height: 1.6; }
+  .service ul { list-style: none; margin-top: 14px; }
+  .service li { color: var(--ink-soft); font-size: 14px; padding: 4px 0; padding-left: 16px; position: relative; }
+  .service li::before { content: "—"; color: var(--accent); position: absolute; left: 0; }
+
+  .sectors { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+  .sector { padding: 32px 0; border-top: 1px solid var(--ink); }
+  .sector h4 { font-family: var(--serif); font-size: 22px; font-weight: 500; margin-bottom: 12px; letter-spacing: -0.01em; }
+  .sector p { color: var(--ink-soft); font-size: 14px; line-height: 1.6; }
+
+  .approach { display: grid; grid-template-columns: 1fr 1.6fr; gap: 80px; }
+  .approach-steps { display: flex; flex-direction: column; gap: 40px; }
+  .step { display: grid; grid-template-columns: 80px 1fr; gap: 24px; align-items: start; }
+  .step-num { font-family: var(--serif); font-style: italic; font-size: 36px; color: var(--accent); font-weight: 400; line-height: 1; }
+  .step h4 { font-family: var(--serif); font-size: 22px; font-weight: 500; margin-bottom: 8px; letter-spacing: -0.01em; }
+  .step p { color: var(--ink-soft); font-size: 15px; }
+
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+  .about-text p { font-size: 17px; line-height: 1.7; color: var(--ink-soft); margin-bottom: 18px; }
+  .about-text p:first-of-type { font-family: var(--serif); font-size: 21px; line-height: 1.5; color: var(--ink); font-style: italic; }
+  .about-meta { background: var(--paper); border: 1px solid var(--line); padding: 32px; }
+  .about-meta dt { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faded); font-weight: 600; margin-top: 20px; }
+  .about-meta dt:first-child { margin-top: 0; }
+  .about-meta dd { font-family: var(--serif); font-size: 18px; margin-top: 6px; font-weight: 500; letter-spacing: -0.01em; }
+
+  #contact { padding: 110px 0; border-bottom: 1px solid var(--line); }
+  .contact-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 80px; align-items: end; }
+  .contact-grid h2 { font-family: var(--serif); font-size: clamp(36px, 5vw, 56px); font-weight: 400; line-height: 1.1; letter-spacing: -0.02em; }
+  .contact-grid h2 em { font-style: italic; color: var(--accent); }
+  .contact-links { display: flex; flex-direction: column; gap: 18px; }
+  .contact-link { display: flex; justify-content: space-between; align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--line); color: var(--ink); text-decoration: none; transition: padding 0.2s; }
+  .contact-link:hover { padding-left: 8px; color: var(--accent); }
+  .contact-link span:first-child { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-faded); font-weight: 600; }
+  .contact-link span:last-child { font-family: var(--serif); font-size: 18px; font-weight: 500; }
+
+  footer { padding: 48px 0; font-size: 13px; color: var(--ink-faded); }
+  footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+  footer a { color: var(--ink-soft); text-decoration: none; margin-left: 24px; }
+  footer a:hover { color: var(--accent); }
+
+  @media (max-width: 768px) {
+    .container { padding: 0 24px; }
+    .nav-links { display: none; }
+    .hero { padding: 80px 0 70px; }
+    .services { grid-template-columns: 1fr; }
+    .sectors { grid-template-columns: 1fr; gap: 0; }
+    .sector { border-top: 1px solid var(--line); }
+    .sector:first-child { border-top: 1px solid var(--ink); }
+    .approach { grid-template-columns: 1fr; gap: 40px; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; align-items: start; }
+    footer .container { flex-direction: column; }
+    footer a { margin-left: 0; margin-right: 20px; }
+  }
 </style>
 </head>
+
 <body>
 
-<h1>Kerem Yilmaz Digital Marketing</h1>
-<p class="tagline">Freelance digital marketing consultancy &mdash; Google Ads &amp; Meta Ads campaign management</p>
+<nav>
+  <div class="container">
+    <div class="logo">Kerem Yılmaz <span>—</span> Dijital Pazarlama</div>
+    <div class="nav-links">
+      <a href="#hizmetler">Hizmetler</a>
+      <a href="#sektorler">Sektörler</a>
+      <a href="#yaklasim">Yaklaşım</a>
+      <a href="#hakkimda">Hakkımda</a>
+      <a href="#contact">İletişim</a>
+    </div>
+  </div>
+</nav>
 
-<h2>What we do</h2>
-<p>We help small and mid-sized businesses in Turkey grow through paid advertising. Our work covers campaign strategy, account structure, ongoing optimization, conversion tracking implementation, and performance reporting on Google Ads and Meta (Facebook &amp; Instagram).</p>
+<header class="hero">
+  <div class="container">
+    <div class="hero-tag">İstanbul · Türkiye</div>
+    <h1>Performans pazarlamasını <em>ölçülebilir</em> sonuçlara çeviren danışmanlık.</h1>
+    <p class="hero-sub">Google Ads ve Meta Ads üzerinde, küçük ve orta ölçekli Türk markalarına strateji, kampanya yönetimi ve raporlama sağlıyorum. Her hesap için kişisel takip, her ay net rakamlar.</p>
+  </div>
+</header>
 
-<h2>Sectors</h2>
-<p>E-commerce (electronic components, fashion), aesthetic services, and B2B services.</p>
+<section id="hizmetler">
+  <div class="container">
+    <div class="section-label">01 · Hizmetler</div>
+    <h2 class="section-title">İşin tamamı tek bir kişiyle — <em>danışman seviyesinde</em>, ajans seviyesinde sonuçlarla.</h2>
 
-<h2>Internal tools</h2>
-<p>This domain hosts internal documentation for an automation tool used by the consultancy to streamline reporting and monitoring across managed client accounts. The tool is not publicly available.</p>
+    <div class="services">
+      <div class="service">
+        <div class="service-num">01</div>
+        <h3>Google Ads Kampanya Yönetimi</h3>
+        <p>Search, Performance Max, Shopping ve Display kampanyalarının uçtan uca yönetimi.</p>
+        <ul>
+          <li>Hesap yapısı ve kampanya stratejisi</li>
+          <li>Anahtar kelime ve negatif keyword araştırması</li>
+          <li>Bütçe ve teklif optimizasyonu</li>
+          <li>Conversion tracking ve attribution kurulumu</li>
+          <li>Haftalık performans takibi ve raporlama</li>
+        </ul>
+      </div>
 
-<div class="links">
-  <a href="privacy.html">Privacy Policy</a>
-  <a href="https://www.instagram.com/keremyilmaz.ads">Instagram</a>
-  <a href="mailto:keremce2001@gmail.com">Contact</a>
-</div>
+      <div class="service">
+        <div class="service-num">02</div>
+        <h3>Meta Ads Kampanya Yönetimi</h3>
+        <p>Facebook ve Instagram'da Reklam Yöneticisi üzerinden hedef kitle ve creative yönetimi.</p>
+        <ul>
+          <li>Funnel yapısı: TOFU/MOFU/BOFU kurulumu</li>
+          <li>Audience oluşturma: custom & lookalike</li>
+          <li>Creative test ve iterasyon stratejisi</li>
+          <li>Pixel & Conversions API entegrasyonu</li>
+          <li>Retargeting ve dönüşüm optimizasyonu</li>
+        </ul>
+      </div>
+
+      <div class="service">
+        <div class="service-num">03</div>
+        <h3>E-ticaret Büyüme Danışmanlığı</h3>
+        <p>Reklam harcamasından bağımsız olarak satışı artıracak yapısal düzenlemeler.</p>
+        <ul>
+          <li>Landing page ve checkout optimizasyonu</li>
+          <li>Ürün feed yönetimi (Merchant Center)</li>
+          <li>Trust elementleri ve dönüşüm engelleri analizi</li>
+          <li>E-posta ve WhatsApp ile reaktivasyon</li>
+        </ul>
+      </div>
+
+      <div class="service">
+        <div class="service-num">04</div>
+        <h3>Pazarlama Otomasyonu</h3>
+        <p>Tekrarlayan operasyonel işleri sistemleştiren özel araç ve workflow geliştirme.</p>
+        <ul>
+          <li>Otomatik raporlama panelleri</li>
+          <li>Lead nitelendirme ve etiketleme akışları</li>
+          <li>Rakip analiz ve creative tracking araçları</li>
+          <li>API entegrasyonları (Google Ads, Meta, Shopify, Ideasoft)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sektorler">
+  <div class="container">
+    <div class="section-label">02 · Sektörler</div>
+    <h2 class="section-title">Tanıdık olduğum <em>üç</em> ana alan var.</h2>
+
+    <div class="sectors">
+      <div class="sector">
+        <h4>E-ticaret</h4>
+        <p>Elektronik komponent, kadın hazır giyim ve aksesuar markaları. Ideasoft, Shopify ve özel altyapılar üzerinde çalışılmış kampanyalar. B2B ve B2C funnel'larında pratik tecrübe.</p>
+      </div>
+      <div class="sector">
+        <h4>Estetik & Sağlık</h4>
+        <p>Saç ekim, klinik ve estetik merkezleri için lokal hedef kitleli kampanyalar. Yerel pazar doygunluk yönetimi, lead kalitesi takibi ve rezervasyon optimizasyonu.</p>
+      </div>
+      <div class="sector">
+        <h4>Hizmet Markaları</h4>
+        <p>Eğitim, mobilya ve dijital hizmet markaları için brand awareness ve lead generation kampanyaları. Uzun döngülü satış için nurturing akışları.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="yaklasim">
+  <div class="container">
+    <div class="section-label">03 · Yaklaşım</div>
+    <h2 class="section-title">Her hesap için <em>aynı disiplinli</em> dört adım.</h2>
+
+    <div class="approach">
+      <div>
+        <p style="color: var(--ink-soft); font-size: 16px; line-height: 1.7;">
+          Reklam yönetimi sadece bütçe ayarlamak değil. Bir markanın ürünü, hedef kitlesi, fiyat noktası ve operasyonu birlikte düşünülmedikçe en iyi kampanya bile orta sonuç verir. Bu yüzden her engagement bir veri ve hipotezle başlar.
+        </p>
+      </div>
+
+      <div class="approach-steps">
+        <div class="step">
+          <div class="step-num">i.</div>
+          <div>
+            <h4>Teşhis</h4>
+            <p>Mevcut hesap, dönüşüm verisi, rakip pozisyon ve operasyonel akış incelenir. Sorun reklam mı, ürün mü, landing mi — netleştirilir.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">ii.</div>
+          <div>
+            <h4>Yapılandırma</h4>
+            <p>Hesap yapısı, conversion tracking ve raporlama altyapısı kurulur ya da revize edilir. Veri temiz olmadan optimizasyon başlamaz.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">iii.</div>
+          <div>
+            <h4>Operasyon</h4>
+            <p>Haftalık optimizasyon döngüsü, A/B testler, creative iterasyonları ve bütçe dağılımı düzenli olarak yürütülür.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">iv.</div>
+          <div>
+            <h4>Raporlama</h4>
+            <p>Aylık net rakamlar, çeyreklik strateji review'ları. Ne çalıştı, ne çalışmadı, sıradaki çeyrekte ne deneyeceğiz.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="hakkimda">
+  <div class="container">
+    <div class="section-label">04 · Hakkımda</div>
+    <h2 class="section-title">Bir kişi, bir hesap, <em>tam dikkat</em>.</h2>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Türkiye'de e-ticaret ve hizmet markaları için Google Ads ve Meta Ads üzerine çalışan bağımsız bir danışmanım.</p>
+        <p>Ajans modeli yerine doğrudan müşteriyle çalışıyorum: stratejiyi de ben kuruyorum, kampanyayı da ben yönetiyorum, raporu da ben yazıyorum. Bu, az sayıda hesabı seçmemi gerektiriyor — ama seçtiklerimde derinlik anlamına geliyor.</p>
+        <p>Aktif olarak yönetmekte olduğum hesaplar arasında e-ticaret (elektronik komponent, hazır giyim) ve estetik hizmetler var. Tüm hesaplar kendi MCC ve Business Manager portföyüm altında.</p>
+        <p>Yan tarafta, kendi danışmanlık operasyonum için pazarlama otomasyonu araçları geliştiriyorum: raporlama, rakip analizi ve operasyon takibi için iç araçlar. Aynı yöntemleri zaman zaman müşteri tarafına da getiriyorum.</p>
+      </div>
+
+      <dl class="about-meta">
+        <dt>Lokasyon</dt>
+        <dd>İstanbul, Türkiye</dd>
+        <dt>Çalışma Modeli</dt>
+        <dd>Aylık retainer · Proje bazlı</dd>
+        <dt>Aktif Hesap Sayısı</dt>
+        <dd>3 — 8 marka</dd>
+        <dt>Platformlar</dt>
+        <dd>Google Ads · Meta Ads · Shopify · Ideasoft</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <h2>Hesabınıza <em>net bir bakış</em> ister misiniz?</h2>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:keremce2001@gmail.com">
+          <span>E-posta</span>
+          <span>keremce2001@gmail.com</span>
+        </a>
+        <a class="contact-link" href="https://www.instagram.com/keremyilmaz.ads" target="_blank" rel="noopener">
+          <span>Instagram</span>
+          <span>@keremyilmaz.ads</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <footer>
-&copy; 2026 Kerem Yilmaz Digital Marketing
+  <div class="container">
+    <div>© 2026 Kerem Yılmaz Dijital Pazarlama Danışmanlığı</div>
+    <div>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+  </div>
 </footer>
 
 </body>

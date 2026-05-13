@@ -3,61 +3,109 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy — Kerem Yilmaz Ads Automation</title>
+<title>Privacy Policy — Kerem Yılmaz Digital Marketing</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
 <style>
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    max-width: 720px;
-    margin: 60px auto;
-    padding: 0 24px;
-    color: #1a1a1a;
-    line-height: 1.65;
-    font-size: 16px;
+  :root {
+    --bg: #f6f3ee;
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --ink-faded: #8a8a8a;
+    --accent: #b8543b;
+    --line: #e0d9cf;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', -apple-system, sans-serif;
   }
-  h1 { font-size: 26px; margin-bottom: 4px; }
-  h2 { font-size: 18px; margin-top: 32px; color: #333; }
-  .updated { color: #777; font-size: 14px; margin-bottom: 32px; }
-  a { color: #1a73e8; }
-  ul { padding-left: 22px; }
-  li { margin-bottom: 6px; }
-  footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #eee; color: #888; font-size: 13px; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+  .container { max-width: 760px; margin: 0 auto; padding: 0 32px; }
+  nav { padding: 32px 0; border-bottom: 1px solid var(--line); }
+  nav .container { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; }
+  .logo { font-family: var(--serif); font-size: 20px; font-weight: 500; letter-spacing: -0.01em; }
+  .logo span { color: var(--accent); }
+  .logo a { color: inherit; text-decoration: none; }
+  .back { font-size: 14px; color: var(--ink-soft); text-decoration: none; }
+  .back:hover { color: var(--accent); }
+  header.page-header { padding: 80px 0 40px; border-bottom: 1px solid var(--line); }
+  .page-tag { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 24px; }
+  header.page-header h1 { font-family: var(--serif); font-size: clamp(40px, 5.5vw, 60px); font-weight: 400; letter-spacing: -0.02em; line-height: 1.05; margin-bottom: 16px; }
+  .updated { color: var(--ink-faded); font-size: 14px; }
+  main { padding: 60px 0 80px; }
+  main h2 { font-family: var(--serif); font-size: 26px; font-weight: 500; letter-spacing: -0.015em; margin: 48px 0 16px; }
+  main h2:first-child { margin-top: 0; }
+  main p { margin-bottom: 16px; color: var(--ink-soft); }
+  main ul { margin: 8px 0 20px 0; padding-left: 24px; }
+  main li { margin-bottom: 8px; color: var(--ink-soft); }
+  main strong { color: var(--ink); font-weight: 600; }
+  footer { padding: 48px 0; font-size: 13px; color: var(--ink-faded); border-top: 1px solid var(--line); }
+  footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; max-width: 1100px; }
+  footer a { color: var(--ink-soft); text-decoration: none; margin-left: 24px; }
+  footer a:hover { color: var(--accent); }
+  @media (max-width: 768px) {
+    .container { padding: 0 24px; }
+    header.page-header { padding: 60px 0 30px; }
+    footer .container { flex-direction: column; }
+    footer a { margin-left: 0; margin-right: 20px; }
+  }
 </style>
 </head>
+
 <body>
 
-<h1>Privacy Policy</h1>
-<p class="updated">Last updated: 10 May 2026</p>
+<nav>
+  <div class="container">
+    <div class="logo"><a href="/">Kerem Yılmaz <span>—</span> Dijital Pazarlama</a></div>
+    <a class="back" href="/">← Ana sayfa</a>
+  </div>
+</nav>
 
-<p>This Privacy Policy describes how the internal automation tool ("the Tool") operated by <strong>Kerem Yilmaz Digital Marketing</strong> ("we", "us") handles information accessed through the Meta Marketing API and the Google Ads API. The Tool is for internal use only and is not made available to the public, to clients, or to any third party.</p>
+<header class="page-header">
+  <div class="container">
+    <div class="page-tag">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: 10 May 2026</p>
+  </div>
+</header>
+
+<main>
+<div class="container">
+
+<p>This Privacy Policy describes how the internal automation tools and reporting systems operated by <strong>Kerem Yılmaz Digital Marketing</strong> ("we", "us") handle information accessed through advertising platform APIs (Meta Marketing API, Google Ads API, and related services). The tools described here are for internal use only and are not made available to the public, to clients as standalone products, or to any third party.</p>
 
 <h2>1. Scope</h2>
-<p>The Tool is operated solely by Kerem Yilmaz, a freelance digital marketing consultant based in Turkey, for the purpose of automating reporting, monitoring, and rule-based optimization tasks across advertising accounts that Kerem Yilmaz Digital Marketing has been authorized to manage by their respective owners.</p>
+<p>The tools described in this policy are operated solely by Kerem Yılmaz, a freelance digital marketing consultant based in Istanbul, Turkey. Their purpose is to automate reporting, monitoring, and rule-based optimization tasks across advertising accounts that we have been authorized to manage by their respective owners.</p>
+<p>This policy does not cover any data collected through the public-facing website at keremyilmazads.com. The website itself does not collect personally identifiable information, does not use tracking cookies beyond essential browser cookies, and does not run analytics tags.</p>
 
 <h2>2. Information We Access</h2>
-<p>The Tool accesses the following categories of information through authorized API connections:</p>
+<p>Through authorized API connections to advertising platforms, we access the following categories of information:</p>
 <ul>
-  <li>Advertising performance metrics (impressions, clicks, cost, conversions, CTR, CPM, CPC, ROAS) for managed campaigns</li>
-  <li>Campaign, ad set, and ad configuration data (names, status, budgets, schedules, targeting parameters)</li>
-  <li>Conversion and pixel event data for managed pixels</li>
-  <li>Ad account metadata required to identify and address the correct managed account</li>
+  <li>Advertising performance metrics — impressions, clicks, cost, conversions, click-through rate, cost per acquisition, return on ad spend — for campaigns we manage</li>
+  <li>Campaign, ad set, and ad configuration data — names, status, budgets, schedules, targeting parameters — for accounts we have been granted access to</li>
+  <li>Conversion event data, pixel data, and dataset metadata for tracking pixels we have access to</li>
+  <li>Ad account metadata required to identify and operate on the correct managed account</li>
 </ul>
-<p>The Tool does not access, collect, or process personally identifiable information (PII) about end users (the consumers who view, click on, or convert from our clients' ads). Any user-level data exposed by the platforms is aggregated before any human review.</p>
+<p>We do not access, collect, or process personally identifiable information about end users — that is, the consumers who view, click on, or convert from advertisements managed by us. Any user-level data exposed by the platforms is aggregated before any human review.</p>
 
 <h2>3. How Information Is Used</h2>
-<p>Information accessed through the API is used exclusively for:</p>
+<p>Information accessed through these APIs is used exclusively for:</p>
 <ul>
-  <li>Generating performance reports for the account owner</li>
-  <li>Sending monitoring alerts to the operator (e.g. via Telegram) when performance metrics deviate from defined thresholds</li>
+  <li>Generating performance reports for the relevant account owner</li>
+  <li>Sending monitoring alerts to the operator when performance metrics deviate from pre-defined thresholds</li>
   <li>Applying pre-approved, rule-based optimizations such as pausing under-performing campaigns or making bounded budget adjustments</li>
+  <li>Internal analysis to inform optimization decisions across the accounts we manage</li>
 </ul>
-<p>Information accessed for one client's account is never used in connection with another client, and is never disclosed to any third party.</p>
+<p>Information accessed for one client's account is never used in connection with another client and is never disclosed to any third party except as outlined in section 5 below.</p>
 
 <h2>4. Data Storage and Retention</h2>
-<p>API credentials (developer tokens, OAuth tokens, app secrets) are stored in environment variables on a private server with restricted access; they are never written to logs, never committed to version control, and never shared.</p>
-<p>Raw API responses are not persisted. Aggregated report outputs (PDF, Markdown summaries) are retained for up to 90 days for audit and historical comparison purposes, then automatically deleted. Operational log files are rotated weekly and removed after 30 days.</p>
+<p>API credentials including developer tokens, OAuth refresh tokens, and app secrets are stored in environment variables on a private server with access restricted to the operator. Credentials are never written to logs, never committed to version control, and never shared.</p>
+<p>Raw API responses are not persisted long-term. Aggregated report outputs (PDF, Markdown summaries) are retained for up to 90 days for audit and historical comparison purposes, then automatically deleted. Operational log files are rotated weekly and removed after 30 days.</p>
 
 <h2>5. Data Sharing</h2>
-<p>We do not sell, license, or otherwise share data accessed through the API with any third party, with the following narrow exceptions:</p>
+<p>We do not sell, license, or otherwise share data accessed through these APIs with any third party, with the following narrow exceptions:</p>
 <ul>
   <li>The respective platform (Meta or Google) for the purpose of making the authorized API call itself.</li>
   <li>The owner of the managed account, who receives reports derived from data accessed in their own account.</li>
@@ -65,33 +113,43 @@
 </ul>
 
 <h2>6. Security</h2>
-<p>Access to the server running the Tool is restricted to the operator (Kerem Yilmaz) and protected by SSH key authentication. The server receives security updates regularly. There is no public-facing service exposed by the Tool.</p>
+<p>Access to the server running these tools is restricted to the operator and protected by SSH key authentication. The server receives security updates regularly. There is no public-facing service exposed by the tools themselves.</p>
 
 <h2>7. Account Owner Rights</h2>
 <p>Owners of managed advertising accounts may at any time:</p>
 <ul>
-  <li>Revoke the Tool's access to their account through their Meta Business Manager or Google Ads account permissions interface.</li>
+  <li>Revoke our access to their account through their Meta Business Manager or Google Ads account permissions interface.</li>
   <li>Request deletion of any retained report outputs that pertain to their account.</li>
-  <li>Request a description of what data has been accessed by the Tool in connection with their account.</li>
+  <li>Request a description of what data has been accessed by our tools in connection with their account.</li>
 </ul>
 <p>Such requests can be sent to the contact address below and will be honored within 30 days.</p>
 
 <h2>8. Compliance</h2>
-<p>The Tool is operated in compliance with the Meta Platform Terms, the Meta Developer Policies, the Google Ads API Terms and Conditions, and the Google API Services User Data Policy, including the Limited Use requirements where applicable.</p>
+<p>We operate in compliance with the Meta Platform Terms, the Meta Developer Policies, the Google Ads API Terms and Conditions, and the Google API Services User Data Policy, including the Limited Use requirements where applicable.</p>
 
 <h2>9. Changes to This Policy</h2>
-<p>We may update this policy from time to time as the scope of the Tool evolves. The "Last updated" date at the top of this document reflects the most recent revision.</p>
+<p>We may update this policy from time to time as the scope of our tools evolves. The "Last updated" date at the top of this document reflects the most recent revision.</p>
 
 <h2>10. Contact</h2>
-<p>For questions about this Privacy Policy or the Tool, contact:</p>
+<p>For questions about this Privacy Policy or our tools, contact:</p>
 <p>
-Kerem Yilmaz<br>
-Kerem Yilmaz Digital Marketing<br>
-Email: keremce2001@gmail.com
+Kerem Yılmaz<br>
+Kerem Yılmaz Digital Marketing<br>
+Istanbul, Turkey<br>
+Email: <a href="mailto:keremce2001@gmail.com" style="color: var(--accent); text-decoration: none;">keremce2001@gmail.com</a>
 </p>
 
+</div>
+</main>
+
 <footer>
-&copy; 2026 Kerem Yilmaz Digital Marketing. Internal automation tool. Not a public-facing product.
+  <div class="container">
+    <div>© 2026 Kerem Yılmaz Dijital Pazarlama Danışmanlığı</div>
+    <div>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+  </div>
 </footer>
 
 </body>
